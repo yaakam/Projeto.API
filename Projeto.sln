@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Dominio", "Projeto.Domain\Projeto.Dominio.csproj", "{4A91C2C6-7B28-48D8-A712-4763814FA087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Dominio", "Projeto.Domain\Projeto.Dominio.csproj", "{4A91C2C6-7B28-48D8-A712-4763814FA087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.API", "Projeto.API\Projeto.API.csproj", "{315FD582-363B-4460-9848-500E69E77913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.API", "Projeto.API\Projeto.API.csproj", "{315FD582-363B-4460-9848-500E69E77913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Repositorio", "Projeto.Repositorios\Projeto.Repositorio.csproj", "{D6AB5B99-9D17-4404-B26C-C8141B0967E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Repositorio", "Projeto.Repositorios\Projeto.Repositorio.csproj", "{D6AB5B99-9D17-4404-B26C-C8141B0967E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projeto.Utilitarios", "Projeto.Utilitarios\Projeto.Utilitarios.csproj", "{EFC22A28-ECA0-4DAF-83E1-AF6E27DD5E94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Projeto.Utilitarios", "Projeto.Utilitarios\Projeto.Utilitarios.csproj", "{EFC22A28-ECA0-4DAF-83E1-AF6E27DD5E94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
