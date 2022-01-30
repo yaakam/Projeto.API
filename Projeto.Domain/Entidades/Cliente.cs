@@ -123,16 +123,16 @@ namespace Projeto.Dominio.Entidades
             if (endereco == null)
             {
                 throw new Exception("O endereço não pode ser nulo.");
-            }
-
-            endereco.Cliente = this;
-
-            listaDeEnderecos.Add(endereco);
+            }            
         }
 
         public void AdicionarEndereco(Endereco endereco)
         {
             ValidarLista(endereco);
+
+            endereco.Cliente = this;
+
+            listaDeEnderecos.Add(endereco);
         }
 
         #endregion

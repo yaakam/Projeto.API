@@ -4,7 +4,7 @@
     <id name = "Codigo" column="Codigo" type="guid" >
       <generator class="guid.comb" />
     </id>
-    <many-to-one name="Cliente" class="Projeto.Dominio.Entidades.Cliente" column="CodigoDoCliente" />
+    <many-to-one name="Cliente" class="Projeto.Dominio.Entidades.Cliente" column="CodigoDoCliente"/>
     <property name="Logradouro" column="Logradouro" />
     <property name="SemNumero" column="SemNumero" />
     <property name="Numero" column="Numero" />

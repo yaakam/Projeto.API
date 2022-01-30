@@ -7,7 +7,7 @@
     <property name="Nome" column="Nome" />
     <property name="CPF" column="CPF" />
     <property name="DataDeNascimento" column="DataDeNascimento" />
-    <bag name="ListaDeEnderecos" inverse="true" cascade="all,delete-orphan" lazy="true">
+    <bag name="ListaDeEnderecos" inverse="true" cascade="all-delete-orphan" lazy="false">
       <key column="CodigoDoCliente" />
       <one-to-many class="Projeto.Dominio.Entidades.Endereco"/>
     </bag>

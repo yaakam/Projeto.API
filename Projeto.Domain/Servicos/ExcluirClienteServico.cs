@@ -13,9 +13,14 @@ namespace Projeto.Dominio.Servicos
         {
             var repositorioDoCliente = DIContainer.CreateInstanceWithSession<IClienteRepositorio>();
             var cliente = repositorioDoCliente.SelecionarPeloCodigo(codigo);
-            var sucesso = repositorioDoCliente.Excluir(cliente);
-            if (sucesso) 
-                Mensagens.Add(new Mensagem("Excluido com sucesso", TipoDeMensagemEnumerador.Informacao));         
+            if (cliente != null)
+            {
+                var sucesso = repositorioDoCliente.Excluir(cliente);
+                if (sucesso)
+                {
+                    Mensagens.Add(new Mensagem("Excluido com sucesso", TipoDeMensagemEnumerador.Informacao));
+                }                    
+            }                     
         }
     }
 }

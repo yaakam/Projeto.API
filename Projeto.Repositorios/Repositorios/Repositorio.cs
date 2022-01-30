@@ -39,7 +39,8 @@ namespace Projeto.Repositorio.Repositorios
             try
             {
                 foreach (var entity in lista)
-                    SalvarObjeto(entity);                
+                    SalvarObjeto(entity);
+
                 return lista;
             }
             catch(Exception ex)
@@ -93,11 +94,13 @@ namespace Projeto.Repositorio.Repositorios
         #region "Persistênca interna"
         private void SalvarObjeto(obj entity)
         {
+            Sessao.Clear();
             Sessao.SaveOrUpdate(entity);
         }
 
         private void ExcluirObjeto(obj entity)
         {
+            Sessao.Clear();
             Sessao.Delete(entity);
         }
 

@@ -1,6 +1,7 @@
 ﻿using Projeto.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Projeto.Dominio.ObjetosDeValor
 {
@@ -15,7 +16,7 @@ namespace Projeto.Dominio.ObjetosDeValor
         public Cliente ConverterEmCliente()
         {
             var cliente  = new Cliente(Codigo, Nome, CPF, DataDeNascimento);
-            foreach (var item in ListaDeEnderecos)
+            foreach (var item in ListaDeEnderecos.ToList())
                 cliente.AdicionarEndereco(item.ConverterEmEndereco(cliente));
             return cliente;
         }

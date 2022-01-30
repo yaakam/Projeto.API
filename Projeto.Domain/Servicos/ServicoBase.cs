@@ -98,7 +98,7 @@ namespace Projeto.Dominio.Servicos
             {
                 Status = !Mensagens.TemErros(),
                 Dados = Dados,
-                Mensagens = Mensagens
+                Mensagens = Dados == null ? new List<Mensagem>() { new Mensagem("O processo não gerou dados.", TipoDeMensagemEnumerador.Informacao) } : Mensagens
             };
         }
 
@@ -136,7 +136,7 @@ namespace Projeto.Dominio.Servicos
             {
                 Status = !Mensagens.TemErros(),
                 Dados = Dados,
-                Mensagens = Mensagens
+                Mensagens = Dados == null ? new List<Mensagem>() { new Mensagem("O processo não gerou dados.", TipoDeMensagemEnumerador.Informacao) } : Mensagens
             };
         }
 
