@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Projeto.API</name>
+    </assembly>
+    <members>
+        <member name="T:Projeto.API.Controladores.ClienteController">
+            <summary>
+            Controlador do CRUD de clientes
+            </summary>
+        </member>
+        <member name="M:Projeto.API.Controladores.ClienteController.SelecionarTodos">
+            <summary>
+            Retorna todos os clientes sem filtros.
+            </summary>
+            <returns>Lista de clientes</returns>
+        </member>
+        <member name="M:Projeto.API.Controladores.ClienteController.selecionarPorCodigo(System.Guid)">
+            <summary>
+            Retorna o cliente pelo código informado.
+            </summary>
+            <returns>Entidade cliente</returns>
+        </member>
+        <member name="M:Projeto.API.Controladores.ClienteController.Salvar(Projeto.Dominio.ObjetosDeValor.ClienteRequisicao)">
+            <summary>
+            Salva ou atualiza um cliente enviado.
+            </summary>
+            <param name="cliente">Cliente que será atualizado</param>
+            <returns>Entidade do cliente atualizada</returns>
+        </member>
+        <member name="M:Projeto.API.Controladores.ClienteController.Excluir(System.Guid)">
+            <summary>
+            Exclui o registro pelo código.
+            </summary>
+            <param name="codigo">Código do cliente que será exluido</param>
+            <returns>Erro ou sucesso</returns>
+        </member>
+    </members>
+</doc>

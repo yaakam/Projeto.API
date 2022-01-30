@@ -1,0 +1,10 @@
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.csproj.AssemblyReference.cache
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.AssemblyInfoInputs.cache
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.AssemblyInfo.cs
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.csproj.CoreCompileInputs.cache
+C:\P\Projeto\Projeto.Domain\bin\Debug\netcoreapp3.1\Projeto.Domain.deps.json
+C:\P\Projeto\Projeto.Domain\bin\Debug\netcoreapp3.1\Projeto.Domain.dll
+C:\P\Projeto\Projeto.Domain\bin\Debug\netcoreapp3.1\Projeto.Domain.pdb
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.dll
+C:\P\Projeto\Projeto.Domain\obj\Debug\netcoreapp3.1\Projeto.Domain.pdb

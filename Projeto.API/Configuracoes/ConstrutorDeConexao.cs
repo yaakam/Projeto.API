@@ -7,16 +7,15 @@ namespace Projeto.API.Configuracoes
         public static void Construir()
         {
             NHibernateConfiguracoes.Dialect = "NHibernate.Dialect.MsSql2012Dialect";
-            //NHibernateConfiguracoes.DriverClass = "NHibernate.Driver.SqlClientDriver";
             NHibernateConfiguracoes.Timeout = "5000";
             NHibernateConfiguracoes.Connection =
                 new DadosConexao
                 {
-                    Server = "LOCALHOST\\SQLSERVER",
-                    Port = string.Empty,
-                    Database = "BDPROJETO",
-                    User = "SA",
-                    Password = "M1n3Rv@7"
+                    Server = "{Servidor}",
+                    Port = "{Porta}",
+                    Database = "{Banco de dados}",
+                    User = "{Usuário}",
+                    Password = "{Senha}"
                 };
                 NHibernateConfiguracoes.Assembly.Add("Projeto.Repositorio");
 
