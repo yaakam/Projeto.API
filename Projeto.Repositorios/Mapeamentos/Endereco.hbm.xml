@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns = "urn:nhibernate-mapping-2.2" >
+  <class name="Projeto.Dominio.Entidades.Endereco, Projeto.Dominio" table="Endereco" lazy="false">
+    <id name = "Codigo" column="Codigo" type="guid" >
+      <generator class="guid.comb" />
+    </id>
+    <many-to-one name="Cliente" class="Projeto.Dominio.Entidades.Cliente" column="CodigoDoCliente" />
+    <property name="Logradouro" column="Logradouro" />
+    <property name="SemNumero" column="SemNumero" />
+    <property name="Numero" column="Numero" />
+    <property name="Bairro" column="Bairro" />
+    <property name="Cidade" column="Cidade" />
+    <property name="Estado" column="Estado" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mapeamentos\Cliente.hbm.xml" />
+    <None Remove="Mapeamentos\Endereco.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Mapeamentos\Cliente.hbm.xml" />
+    <EmbeddedResource Include="Mapeamentos\Endereco.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto.Domain\Projeto.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>
