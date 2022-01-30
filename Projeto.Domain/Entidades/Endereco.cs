@@ -10,7 +10,7 @@ namespace Projeto.Dominio.Entidades
 
         }
 
-        public Endereco(Guid codigo, Cliente cliente, string logradouro, bool semNumero, int numero, string bairro, string cidade, string estado)
+        public Endereco(Guid codigo, Cliente cliente, string logradouro, bool semNumero, int? numero, string bairro, string cidade, string estado)
         {
             Codigo = codigo;
             Cliente = cliente;

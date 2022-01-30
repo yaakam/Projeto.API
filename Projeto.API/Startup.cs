@@ -7,10 +7,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Projeto.API.Configuracoes;
 using Projeto.Dominio.Extensoes;
 using System;
 using System.IO;
+using System.Text.Json;
 
 namespace Projeto.API
 {
@@ -27,15 +29,11 @@ namespace Projeto.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(F => F.SerializerSettings.ContractResolver = new DefaultContractResolver());
             services.AddTratamentoGlobalDeExececao();
             ConfigurarSwagger(services);
-            services.AddMvc().AddNewtonsoftJson();
-            JsonConvert.DefaultSettings = () => new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
-            services.AddMvc().AddNewtonsoftJson(
-                  options =>
-                  {
-                      options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                  });
+            //JsonConvert.DefaultSettings = () => new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore };
+            services.AddMvc().AddNewtonsoftJson(F => { F.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; });
             ConstrutorDeConexao.Construir();
             ConstrutorDeInjecoes.Construir();
         }

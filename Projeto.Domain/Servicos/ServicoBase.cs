@@ -38,28 +38,28 @@ namespace Projeto.Dominio.Servicos
 
 
         #region "Abstrações"        
-        protected virtual async Task DoProcess(T entidade) { }
+        protected virtual async Task RealizarProcesso(T entidade) { }
 
-        protected virtual async Task DoProcess(IList<T> entidade) { }
+        protected virtual async Task RealizarProcesso(IList<T> entidade) { }
 
-        protected virtual async Task DoProcess() { }
+        protected virtual async Task RealizarProcesso() { }
 
         #endregion
 
         #region "Operações pré-implementadas"
-        public async Task<MensagemDeResposta> Process(T entidade)
+        public async Task<MensagemDeResposta> Processar(T entidade)
         {
-            return await ExecuteOperation(entidade, DoProcess);
+            return await ExecuteOperation(entidade, RealizarProcesso);
         }
 
-        public async Task<MensagemDeResposta> Process(IList<T> list)
+        public async Task<MensagemDeResposta> Processar(IList<T> list)
         {
-            return await ExecuteOperation(list, DoProcess);
+            return await ExecuteOperation(list, RealizarProcesso);
         }
 
-        public async Task<MensagemDeResposta> Process()
+        public async Task<MensagemDeResposta> Processar()
         {
-            return await ExecuteOperation(DoProcess);
+            return await ExecuteOperation(RealizarProcesso);
         }
 
         #endregion

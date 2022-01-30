@@ -7,7 +7,7 @@ namespace Projeto.Dominio.Servicos
 {
     public class SelecionarClientePeloCodigoServico: ServicoBase<Guid>
     {
-        protected override async Task DoProcess(Guid codigo)
+        protected override async Task RealizarProcesso(Guid codigo)
         {
             var repository = DIContainer.CreateInstanceWithSession<IClienteRepositorio>();
             Dados = repository.SelecionarPeloCodigo(codigo);

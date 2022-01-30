@@ -32,15 +32,15 @@ namespace Projeto.Dominio.Entidades
             set { codigo = value; }
         }
 
-        
+
         private string nome;
         public virtual string Nome
         {
             get { return nome; }
-            set 
+            set
             {
                 ValidarNome(value);
-                nome = value; 
+                nome = value;
             }
         }
 
@@ -49,32 +49,35 @@ namespace Projeto.Dominio.Entidades
         public virtual string CPF
         {
             get { return cPF; }
-            set 
+            set
             {
                 ValidarCPF(value);
-                cPF = value; 
+                cPF = value;
             }
         }
-        
+
 
         private DateTime dataDeNascimento;
         public virtual DateTime DataDeNascimento
         {
             get { return dataDeNascimento; }
-            set 
+            set
             {
                 ValidarDataDeNascimento(value);
-                dataDeNascimento = value; 
+                dataDeNascimento = value;
             }
         }
 
 
-        private  IList<Endereco> listaDeEnderecos;      
+        private IList<Endereco> listaDeEnderecos;
         public virtual IList<Endereco> ListaDeEnderecos
         {
             get { return listaDeEnderecos; }
             set
             {
+                foreach (var item in value)
+                    ValidarLista(item);
+
                 listaDeEnderecos = value;
             }
         }
@@ -88,7 +91,7 @@ namespace Projeto.Dominio.Entidades
             if (string.IsNullOrEmpty(nome))
             {
                 throw new Exception("O nome o cliente é obrigatório.");
-            } 
+            }
             else if (nome.Length > 30)
             {
                 throw new Exception("O nome do cliente deve conter no máximo 30 caracteres.");
@@ -115,7 +118,7 @@ namespace Projeto.Dominio.Entidades
             }
         }
 
-        public void AdicionarEndereco(Endereco endereco)
+        private void ValidarLista(Endereco endereco)
         {
             if (endereco == null)
             {
@@ -125,6 +128,11 @@ namespace Projeto.Dominio.Entidades
             endereco.Cliente = this;
 
             listaDeEnderecos.Add(endereco);
+        }
+
+        public void AdicionarEndereco(Endereco endereco)
+        {
+            ValidarLista(endereco);
         }
 
         #endregion

@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Projeto.Dominio.Entidades;
+﻿using Microsoft.AspNetCore.Mvc;
+using Projeto.Dominio.ObjetosDeValor;
 using Projeto.Dominio.Servicos;
 using System;
 using System.Threading.Tasks;
@@ -23,7 +22,7 @@ namespace Projeto.API.Controladores
         [Route("selecionarTodos")]
         public async Task<IActionResult> SelecionarTodos()
         {
-            return await Responder(await new SelecionarTodosOsClientesServico().Process());
+            return await Responder(await new SelecionarTodosOsClientesServico().Processar());
         }
 
         /// <summary>
@@ -34,7 +33,7 @@ namespace Projeto.API.Controladores
         [Route("selecionarPorCodigo/{codigo}")]
         public async Task<IActionResult> selecionarPorCodigo(Guid codigo)
         {
-            return await Responder(await new SelecionarClientePeloCodigoServico().Process(codigo));
+            return await Responder(await new SelecionarClientePeloCodigoServico().Processar(codigo));
         }
 
         /// <summary>
@@ -44,9 +43,9 @@ namespace Projeto.API.Controladores
         /// <returns>Entidade do cliente atualizada</returns>
         [HttpPost]
         [Route("salvar")]
-        public async Task<IActionResult> Salvar([FromBody] Cliente cliente)
+        public async Task<IActionResult> Salvar([FromBody] ClienteRequisicao cliente)
         {
-            return await Responder(await new SalvarClienteServico().Process(cliente));
+            return await Responder(await new SalvarClienteServico().Processar(cliente));
         }
 
         /// <summary>
@@ -58,7 +57,7 @@ namespace Projeto.API.Controladores
         [Route("excluir/{codigo}")]
         public async Task<IActionResult> Excluir(Guid codigo)
         {
-            return await Responder(await new ExcluirClienteServico().Process(codigo));
+            return await Responder(await new ExcluirClienteServico().Processar(codigo));
         }
 
         

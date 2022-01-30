@@ -7,7 +7,7 @@ namespace Projeto.Dominio.Servicos
 {
     public class SelecionarTodosOsClientesServico: ServicoBase<Cliente>
     {
-        protected override async Task DoProcess()
+        protected override async Task RealizarProcesso()
         {
             var repository = DIContainer.CreateInstanceWithSession<IClienteRepositorio>();
             Dados = repository.SelecionarTodosOsClientes();

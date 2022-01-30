@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Projeto.Dominio.Servicos
 {
-    public class SalvarClienteServico : ServicoBase<Cliente>
+    public class SalvarClienteServico : ServicoBase<ClienteRequisicao>
     {
-        protected override async Task DoProcess(Cliente entidade)
+        protected override async Task RealizarProcesso(ClienteRequisicao entidade)
         {
             var repositorio = DIContainer.CreateInstanceWithSession<IClienteRepositorio>();
-            Dados = repositorio.Salvar(entidade);
+            Dados = repositorio.Salvar(entidade.ConverterEmCliente());
             if (Dados != null) 
                 Mensagens.Add(new Mensagem("Salvo com sucesso.", TipoDeMensagemEnumerador.Informacao));
         }
