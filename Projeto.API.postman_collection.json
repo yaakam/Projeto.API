@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "5d7a9c92-69fe-4378-8096-666eaeafcfdb",
+		"name": "Projeto.API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Selecionar todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44379/api/cliente/selecionarTodos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44379",
+					"path": [
+						"api",
+						"cliente",
+						"selecionarTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecionar pelo código",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44379/api/cliente/selecionarPorCodigo/{52793810-ad86-4969-9ddb-b1f02f2131e4}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44379",
+					"path": [
+						"api",
+						"cliente",
+						"selecionarPorCodigo",
+						"{52793810-ad86-4969-9ddb-b1f02f2131e4}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nome\": \"Suellene Moledo da Conceição\",\r\n        \"cpf\": \"12209580773\",\r\n        \"dataDeNascimento\": \"1989-10-04\",\r\n        \"listaDeEnderecos\": [\r\n            {\r\n                \"logradouro\": \"João Pessoa\",\r\n                \"semNumero\": false,\r\n                \"numero\": 591,\r\n                \"bairro\": \"Parque Jacaraipe\",\r\n                \"cidade\": \"Serra\",\r\n                \"estado\": \"ES\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44379/api/cliente/salvar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44379",
+					"path": [
+						"api",
+						"cliente",
+						"salvar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44379/api/cliente/excluir/{2391a8b7-9f78-4058-ad98-ae2d01507f5a}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44379",
+					"path": [
+						"api",
+						"cliente",
+						"excluir",
+						"{2391a8b7-9f78-4058-ad98-ae2d01507f5a}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
